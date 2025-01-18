@@ -9,7 +9,7 @@
     {%if latest_question%}
         <ul>
             {% for i in latest_question%}
-            <li><a href='detials/{{i.id}}'>{{i.question_txt}}</a></li>
+            <li><a href='{% url "detail" i.id %}'>{{i.question_txt}}</a></li>
             {%endfor%}
         </ul>
     {%else%}
